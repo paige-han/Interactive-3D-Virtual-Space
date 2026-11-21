@@ -1,0 +1,93 @@
+:root {
+  --bg: #f4f2ee;
+  --ink: #1f2328;
+  --muted: #6b6f76;
+  --pill: rgba(255, 255, 255, 0.72);
+  --pill-border: rgba(31, 35, 40, 0.1);
+  --accent: #1f2328;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; background: var(--bg); color: var(--ink); }
+
+.app { position: relative; height: 100%; overflow: hidden; color: var(--ink); }
+.app canvas { display: block; }
+
+.topbar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  pointer-events: none;
+}
+.topbar > * { pointer-events: auto; }
+
+.title h1 { margin: 2px 0 0; font-size: 20px; font-weight: 650; letter-spacing: -0.01em; }
+.eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  margin-right: 300px; /* keep clear of the Leva panel */
+  background: var(--pill);
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+}
+.tab {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.tab:hover { color: var(--ink); }
+.tab.active { background: var(--accent); color: #fff; }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.hint {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--pill);
+  border: 1px solid var(--pill-border);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .tabs { margin-right: 0; }
+  .hint { white-space: normal; text-align: center; width: calc(100% - 32px); }
+}
+
+.app.dark {
+  --ink: #f2f3f5;
+  --muted: #a3a9b3;
+  --pill: rgba(30, 34, 42, 0.72);
+  --pill-border: rgba(255, 255, 255, 0.12);
+  --accent: #f2f3f5;
+}
+.app.dark .tab.active { color: #111318; }
+
+.lessons-link { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--muted); text-decoration: none; }
+.lessons-link:hover { color: var(--ink); text-decoration: underline; }
