@@ -91,3 +91,4 @@ html, body, #root { margin: 0; height: 100%; background: var(--bg); color: var(-
 
 .lessons-link { display: inline-block; margin-top: 6px; font-size: 13px; color: var(--muted); text-decoration: none; }
 .lessons-link:hover { color: var(--ink); text-decoration: underline; }
+.previs-link { margin-left: 14px; }

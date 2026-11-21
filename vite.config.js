@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
 
 // Relative base so the build works on GitHub Pages under any repo name.
-// Two pages: the demo (index.html) and the course lessons (lessons.html).
+// Pages: the demo, the building blocks, and the film previs exploration.
 export default defineConfig({
   plugins: [react()],
   base: './',
@@ -12,6 +12,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         lessons: resolve(__dirname, 'lessons.html'),
+        previs: resolve(__dirname, 'previs.html'),
       },
     },
   },

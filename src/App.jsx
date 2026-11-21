@@ -69,6 +69,7 @@ export default function App() {
           <span className="eyebrow">React Three Fiber</span>
           <h1>Interactive 3D Virtual Space</h1>
           <a className="lessons-link" href="./lessons.html">Building blocks →</a>
+          <a className="lessons-link previs-link" href="./previs.html">Film previs (WIP) →</a>
         </div>
         <nav className="tabs" aria-label="Scenes">
           {SCENES.map((s) => (

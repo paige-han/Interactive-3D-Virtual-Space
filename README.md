@@ -6,6 +6,14 @@ An interactive 3D web experience built with **React Three Fiber**. It explores h
 
 ![Light & Shadow scene](docs/screenshots/light-and-shadow.jpg)
 
+## 🎬 In progress on this branch: film previs
+
+This branch (`explore/film-previs`) extends the project toward **previsualization for film** — planning shots with a virtual camera that behaves like a real one: real focal lengths and sensor sizes, aspect-ratio frame lines, and a director's view of where the camera stands.
+
+→ **[Exploration notes & roadmap](docs/previs/NOTES.md)** · page: `previs.html`
+
+![Film previs](docs/previs/through-the-lens.jpg)
+
 ## What I set out to build
 
 | Goal | How it's built |
@@ -63,6 +71,7 @@ The **[Building blocks page](https://paige-han.github.io/Interactive-3D-Virtual-
 ```
 index.html                # demo page
 lessons.html              # building blocks page
+previs.html               # film previs exploration (this branch)
 src/
   App.jsx                 # demo: scene tabs, canvas, controls panel
   scenes/                 # the five demo scenes
@@ -70,6 +79,7 @@ src/
     LessonsApp.jsx        # building blocks viewer (sidebar + live stage)
     registry.js           # list of examples and their descriptions
     react/  lighting/  models/  effects/  physics/   # one file per example
+  previs/                 # virtual cinema camera, frame lines, shot presets
 public/
   models/                 # robot.glb (animated character), city.glb
   draco/                  # Draco decoder for compressed models
