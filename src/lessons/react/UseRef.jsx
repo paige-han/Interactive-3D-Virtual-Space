@@ -1,4 +1,4 @@
-// Day 1 · Lesson 5 — useRef for DOM access
+// React foundations — useRef for DOM access
 // A ref holds a value that survives re-renders without causing one.
 // Attached to an element, `ref.current` is that DOM node.
 import { useEffect, useRef, useState } from 'react'

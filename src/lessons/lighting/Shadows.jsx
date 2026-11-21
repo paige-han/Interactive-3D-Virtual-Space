@@ -1,4 +1,4 @@
-// Day 2 · Lesson 1 — Lights and three kinds of shadows
+// Light & materials — Lights and three kinds of shadows
 //  • Real-time: a directional light renders a shadow map every frame.
 //    Its shadow camera decides which area can receive shadows (toggle the helper to see it).
 //  • Contact: a cheap, soft shadow baked from below — great for product shots.

@@ -1,4 +1,4 @@
-// Day 1 · Lesson 3 — useEffect and dependency arrays
+// React foundations — useEffect and dependency arrays
 // The dependency array decides WHEN an effect runs:
 //   []          → once, after the first render (mount)
 //   [count]     → after renders where `count` changed

@@ -1,4 +1,4 @@
-// Day 1 · Lesson 4 — Effect cleanup on unmount
+// React foundations — Effect cleanup on unmount
 // An effect can return a cleanup function. React runs it when the
 // component unmounts, so the interval below never keeps running in the background.
 import { useEffect, useState } from 'react'

@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
-import { ALL_LESSONS, DAYS } from './registry.js'
+import { ALL_LESSONS, GROUPS } from './registry.js'
 
 const SOURCE_BASE = 'https://github.com/paige-han/Interactive-3D-Virtual-Space/blob/main/src/lessons/'
 
@@ -25,13 +25,13 @@ export default function LessonsApp() {
     <div className="lessons">
       <aside className="sidebar">
         <a className="back" href="./">← Back to demo</a>
-        <h1>Course lessons</h1>
-        <p className="muted">Exercises from an interactive 3D web course, completed and cleaned up.</p>
-        {DAYS.map((day) => (
-          <section key={day.title}>
-            <h2>{day.title}</h2>
+        <h1>Building blocks</h1>
+        <p className="muted">The techniques behind the demo, one at a time.</p>
+        {GROUPS.map((group) => (
+          <section key={group.title}>
+            <h2>{group.title}</h2>
             <ol>
-              {day.lessons.map((l) => (
+              {group.lessons.map((l) => (
                 <li key={l.id}>
                   <button className={l.id === activeId ? 'active' : ''} onClick={() => setActiveId(l.id)}>
                     {l.title}
@@ -46,7 +46,7 @@ export default function LessonsApp() {
       <main className="lesson">
         <header>
           <div>
-            <span className="eyebrow">Lesson {index + 1} of {ALL_LESSONS.length}</span>
+            <span className="eyebrow">Example {index + 1} of {ALL_LESSONS.length}</span>
             <h2>{lesson.title}</h2>
             <p>{lesson.summary}</p>
           </div>

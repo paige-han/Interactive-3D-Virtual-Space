@@ -1,4 +1,4 @@
-// Day 2 · Lesson 2 — Image-based lighting with an environment map
+// Light & materials — Image-based lighting with an environment map
 // Instead of placing individual lights, an environment map lights the scene
 // from every direction and shows up in reflections. Here the environment is built
 // from glowing panels (Lightformers) so it works without downloading an HDRI file.

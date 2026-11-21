@@ -1,4 +1,4 @@
-// Day 3 · Lesson 4 — Dropping a 3D model into the physics world
+// Physics & interaction — Dropping a 3D model into the physics world
 // A loaded model can be a rigid body too. Auto-generated colliders ("hull", "trimesh")
 // follow the mesh, but a rigged character's geometry is deformed by its skeleton,
 // so here we turn auto colliders off and fit a simple box collider by hand —

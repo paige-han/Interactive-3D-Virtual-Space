@@ -1,4 +1,4 @@
-// Day 1 · Lesson 6 — useMemo for expensive calculations
+// React foundations — useMemo for expensive calculations
 // Without useMemo, clicking the counter would redo the slow calculation
 // on every render. With it, the result is reused until `inputValue` changes.
 import { useMemo, useState } from 'react'

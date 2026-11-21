@@ -1,4 +1,4 @@
-// Day 3 · Lesson 3 — Kinematic bodies and collision events
+// Physics & interaction — Kinematic bodies and collision events
 // A kinematic body is moved by code, not by physics — but it still pushes things.
 // The spinning bar below is animated every frame with useFrame.
 // onCollisionEnter fires when two bodies touch; here it logs the hit and plays a sound.
@@ -42,6 +42,7 @@ export default function KinematicCollisions() {
   }, [])
 
   useFrame((state) => {
+    if (!twister.current) return
     const time = state.clock.getElapsedTime() * speed
     twister.current.setNextKinematicRotation(new THREE.Quaternion().setFromEuler(new THREE.Euler(0, time, 0)))
     twister.current.setNextKinematicTranslation({ x: Math.cos(time) * 2, y: -0.8, z: 0 })

@@ -1,4 +1,4 @@
-// Day 3 · Lesson 1 — Post-processing effects
+// Visual effects — Post-processing effects
 // Effects run on the finished image, like filters on a photo.
 //  • Bloom makes very bright pixels glow. A material only glows if its color goes
 //    beyond 1.0, so the cube uses emissive light with toneMapping turned off.

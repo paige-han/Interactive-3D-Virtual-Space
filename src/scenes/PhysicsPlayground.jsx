@@ -10,6 +10,7 @@ function Twister({ enabled }) {
   const twister = useRef()
   useFrame((state) => {
     if (!enabled) return
+    if (!twister.current) return
     const time = state.clock.getElapsedTime() * 0.7
     const rotation = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, time, 0))
     twister.current.setNextKinematicRotation(rotation)

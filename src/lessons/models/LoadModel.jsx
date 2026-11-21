@@ -1,4 +1,4 @@
-// Day 2 · Lesson 3 — Loading a 3D model (GLB)
+// 3D models — Loading a 3D model (GLB)
 // useGLTF loads a .glb file and returns its scene graph, which we place with <primitive>.
 // Every mesh inside has to opt in to casting shadows.
 import { useEffect } from 'react'

@@ -1,4 +1,4 @@
-// Day 3 · Lesson 2 — Physics basics with Rapier
+// Physics & interaction — Physics basics with Rapier
 // Wrapping meshes in <RigidBody> hands them to the physics engine:
 //  • dynamic bodies (default) fall and collide, • fixed bodies never move.
 // `colliders` picks the invisible shape used for collisions — turn on debug to see them.

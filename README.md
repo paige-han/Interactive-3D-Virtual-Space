@@ -1,14 +1,24 @@
 # Interactive 3D Virtual Space
 
-An interactive 3D web experience built with **React Three Fiber** — five small scenes that explore light, animated characters, post-processing effects, real-time physics, and large 3D models in the browser.
+An interactive 3D web experience built with **React Three Fiber**. It explores how light, motion, visual effects and physics can turn a flat web page into a space people can move around in and touch.
 
-**[▶ Live demo](https://paige-han.github.io/Interactive-3D-Virtual-Space/)** · **[📘 Course lessons](https://paige-han.github.io/Interactive-3D-Virtual-Space/lessons.html)**
+**[▶ Live demo](https://paige-han.github.io/Interactive-3D-Virtual-Space/)** · **[🧩 Building blocks](https://paige-han.github.io/Interactive-3D-Virtual-Space/lessons.html)**
 
 ![Light & Shadow scene](docs/screenshots/light-and-shadow.jpg)
 
-## Scenes
+## What I set out to build
 
-Switch scenes with the tabs at the top. Each scene has live controls in the panel on the right.
+| Goal | How it's built |
+|---|---|
+| **Make objects feel physically present** | Directional + ambient lighting, real-time, contact and accumulative shadows, and image-based lighting from an environment map |
+| **Bring designed 3D assets to the web** | GLB models loaded with `useGLTF`, a rigged character blending between animation clips, and a large city model with Draco compression framed automatically |
+| **Set mood the way a camera would** | Post-processing: bloom on emissive materials, depth of field, glitch, noise and vignette |
+| **Let people touch the scene** | Rapier physics — gravity, rigid bodies and colliders, click-to-jump impulses, a code-driven kinematic obstacle, and collision events with sound |
+| **Make it explorable and tunable** | Orbit camera controls, live parameter panels with Leva, and a performance monitor with r3f-perf |
+
+## The demo
+
+Five scenes, switched with the tabs at the top. Each has live controls in the panel on the right.
 
 | | |
 |---|---|
@@ -17,23 +27,25 @@ Switch scenes with the tabs at the top. Each scene has live controls in the pane
 
 | Scene | What it shows | Try this |
 |---|---|---|
-| **Light & Shadow** | Standard materials, ambient + directional light, soft contact shadows | Change the shadow color, blur and opacity |
-| **Character** | Loading a rigged GLB model and blending between its animation clips | Switch between Idle, Walk, Run, Fast Run and Jump |
-| **Glow & Focus** | Post-processing: bloom on emissive materials and depth of field | Turn up the glow, toggle depth of field |
-| **Physics** | Rapier physics: gravity, rigid bodies, impulses, a moving kinematic obstacle | Click the yellow cube to make it jump, change gravity |
-| **City** | Loading a large Draco-compressed model and framing it automatically | Orbit and zoom around the city |
+| **Light & Shadow** | Materials, lighting and soft contact shadows | Change the shadow color, blur and opacity |
+| **Character** | A rigged GLB character blending between animation clips | Switch between Idle, Walk, Run, Fast Run and Jump |
+| **Glow & Focus** | Bloom on emissive materials and depth of field | Turn up the glow, toggle depth of field |
+| **Physics** | Gravity, rigid bodies, impulses and a moving obstacle | Click the yellow cube to make it jump, change gravity |
+| **City** | A large Draco-compressed model framed automatically | Orbit and zoom around the city |
 
-## Course lessons
+## Building blocks
 
-Alongside the demo, a separate **[Lessons page](https://paige-han.github.io/Interactive-3D-Virtual-Space/lessons.html)** walks through the original course exercises one by one — each runnable, with a short explanation and a link to its code.
+The **[Building blocks page](https://paige-han.github.io/Interactive-3D-Virtual-Space/lessons.html)** breaks the demo down into 14 small, runnable examples — one technique each, with a short explanation and a link to its code.
 
-![Lessons page](docs/screenshots/lessons.jpg)
+![Building blocks page](docs/screenshots/lessons.jpg)
 
-| Day | Lessons |
+| Topic | Examples |
 |---|---|
-| **Day 1 · React fundamentals** | Composition with `children`, `useState`, `useEffect` & dependency arrays, effect cleanup, `useRef`, `useMemo`, `forwardRef` |
-| **Day 2 · 3D scene basics** | Lights & three kinds of shadows (real-time, contact, accumulative), environment lighting, loading a GLB model |
-| **Day 3 · Effects & physics** | Post-processing (bloom, glitch, noise, vignette, depth of field), physics basics, kinematic bodies & collision events, a character with physics |
+| **React foundations** | Composition with `children`, `useState`, `useEffect` & dependency arrays, effect cleanup, `useRef`, `useMemo`, `forwardRef` |
+| **Light & materials** | Real-time vs. contact vs. accumulative shadows (with shadow-camera helpers), environment lighting and reflections |
+| **3D models** | Loading a GLB model and enabling shadows on its meshes |
+| **Visual effects** | Bloom, glitch, noise, vignette and depth of field |
+| **Physics & interaction** | Rigid bodies and colliders, impulses, kinematic bodies and collision events, a character dropped into the physics world |
 
 ## Tech stack
 
@@ -50,14 +62,14 @@ Alongside the demo, a separate **[Lessons page](https://paige-han.github.io/Inte
 
 ```
 index.html                # demo page
-lessons.html              # course lessons page
+lessons.html              # building blocks page
 src/
   App.jsx                 # demo: scene tabs, canvas, controls panel
   scenes/                 # the five demo scenes
   lessons/
-    LessonsApp.jsx        # lessons viewer (sidebar + live stage)
-    registry.js           # list of lessons and their descriptions
-    day1/  day2/  day3/   # one file per exercise
+    LessonsApp.jsx        # building blocks viewer (sidebar + live stage)
+    registry.js           # list of examples and their descriptions
+    react/  lighting/  models/  effects/  physics/   # one file per example
 public/
   models/                 # robot.glb (animated character), city.glb
   draco/                  # Draco decoder for compressed models
@@ -65,9 +77,9 @@ public/
 
 ## Background
 
-This started as an interactive 3D web course I took in 2023. At the time I uploaded my rough class files as-is — several exercises were unfinished, and some referenced files that never made it into the repo. In 2026 I came back to it: every exercise is now completed, fixed and split into its own file on the Lessons page, and the main concepts are combined into the demo. The original upload is still visible in the commit history.
-
 As a designer, I wanted to understand what it takes to move from static screens to **spatial, interactive experiences** — how light, materials, motion and physics shape what a person feels in a 3D space — and to be able to design those details directly in code.
+
+This project began with an interactive 3D web course I took in 2023. I originally uploaded my rough class files as-is; in 2026 I rebuilt them into this runnable demo and a set of focused examples. The original upload is still visible in the commit history.
 
 ## Run locally
 

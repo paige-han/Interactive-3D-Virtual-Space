@@ -1,4 +1,4 @@
-// Day 1 · Lesson 2 — useState
+// React foundations — useState
 // State is a value React remembers between renders.
 // Calling the setter schedules a re-render with the new value.
 import { useState } from 'react'

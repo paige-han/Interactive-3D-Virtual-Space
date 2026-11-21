@@ -1,4 +1,4 @@
-// Day 1 · Lesson 1 — Composition with `children`
+// React foundations — Composition with `children`
 // A wrapper component doesn't need to know what it wraps:
 // whatever is placed between its tags arrives as `props.children`.
 

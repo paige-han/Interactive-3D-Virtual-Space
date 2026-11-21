@@ -1,4 +1,4 @@
-// Day 1 · Lesson 7 — forwardRef
+// React foundations — forwardRef
 // A parent can't attach a ref to a custom component by default.
 // forwardRef passes the ref through to a DOM element inside it.
 import { forwardRef, useRef } from 'react'
