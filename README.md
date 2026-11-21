@@ -8,7 +8,7 @@ An interactive 3D web experience built with **React Three Fiber**. It explores h
 
 ## 🎬 In progress on this branch: film previs
 
-This branch (`explore/film-previs`) extends the project toward **previsualization for film** — planning shots with a virtual camera that behaves like a real one: real focal lengths and sensor sizes, aspect-ratio frame lines, and a director's view of where the camera stands.
+This branch (`explore/film-previs`) extends the project toward **previsualization for film**, drawing on my time working on film sets and in TV drama production — planning shots with a virtual camera that behaves like a real one: real focal lengths and sensor sizes, aspect-ratio frame lines, and a director's view of where the camera stands.
 
 → **[Exploration notes & roadmap](docs/previs/NOTES.md)** · page: `previs.html`
 

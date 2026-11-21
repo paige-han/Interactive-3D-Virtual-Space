@@ -4,9 +4,11 @@
 
 ## Why
 
-The main demo showed that a browser can render lighting, characters and depth of field in real time. **Previsualization (previs)** is how film crews plan shots before a shoot day: blocking actors, choosing lenses and testing camera moves in a rough 3D version of the set.
+Before moving into design and engineering, I worked on film sets and in TV drama production. On set, I saw how much of a shoot day depends on decisions made beforehand: which lens, where the camera stands, how the actors move through the frame. Those decisions were usually communicated through sketches, reference photos and a lot of explaining — and changing them on the day was expensive.
 
-Professional previs usually happens in game engines like Unreal. This exploration asks a narrower question: **what would a lightweight, link-shareable shot-planning tool look like if it lived in the browser** — something a director, DP or production designer could open on a laptop or phone without installing anything?
+**Previsualization (previs)** is how crews plan those shots in a rough 3D version of the set. Professional previs usually happens in game engines like Unreal, which takes specialist skills and software that most of the crew doesn't have.
+
+This exploration asks a narrower question: **what would a lightweight, link-shareable shot-planning tool look like if it lived in the browser** — something a director, DP or production designer could open on a laptop or phone without installing anything? As a designer, I'm especially interested in making it speak the crew's language — millimeters, frame lines, shot sizes — rather than 3D-software terms.
 
 ## Step 1 — A camera that behaves like a real one ✅
 
