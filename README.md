@@ -10,9 +10,11 @@ An interactive 3D web experience built with **React Three Fiber**. It explores h
 
 This branch (`explore/film-previs`) extends the project toward **previsualization for film**, drawing on my time working on film sets and in TV drama production — planning shots with a virtual camera that behaves like a real one: real focal lengths and sensor sizes, aspect-ratio frame lines, and a director's view of where the camera stands.
 
+The newest step turns it into a way to **direct AI video in set language**: design a camera move, get a prompt written from the lens and framing, and export a shot package (start/end frames, camera track, previs and depth videos) for video models — then compare the result with the intent side by side.
+
 → **[Exploration notes & roadmap](docs/previs/NOTES.md)** · page: `previs.html`
 
-![Film previs](docs/previs/through-the-lens.jpg)
+![Film previs](docs/previs/shot-workflow.jpg)
 
 ## What I set out to build
 
@@ -79,7 +81,7 @@ src/
     LessonsApp.jsx        # building blocks viewer (sidebar + live stage)
     registry.js           # list of examples and their descriptions
     react/  lighting/  models/  effects/  physics/   # one file per example
-  previs/                 # virtual cinema camera, frame lines, shot presets
+  previs/                 # virtual cinema camera, camera moves, prompt composer, shot export
 public/
   models/                 # robot.glb (animated character), city.glb
   draco/                  # Draco decoder for compressed models
