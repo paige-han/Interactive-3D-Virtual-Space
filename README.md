@@ -1,6 +1,6 @@
 # Interactive 3D Virtual Space
 
-An interactive 3D web experience built with **React Three Fiber**. It explores how light, motion, visual effects and physics can turn a flat web page into a space people can move around in and touch.
+An interactive 3D web experience built with **React Three Fiber**. It explores how light, motion, visual effects and physics can turn a flat web page into a space people can move around in and touch. (2023)
 
 **[▶ Live demo](https://paige-han.github.io/Interactive-3D-Virtual-Space/)** · **[🧩 Building blocks](https://paige-han.github.io/Interactive-3D-Virtual-Space/lessons.html)**
 
